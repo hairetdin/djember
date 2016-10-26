@@ -1,0 +1,11 @@
+{{!-- app/application/template.hbs --}}
+<div class="menu">
+  {{#if session.isAuthenticated}}
+    <a href {{action 'invalidateSession'}}>Выход</a>
+	{{else}}
+	  {{#link-to 'login'}}Вход{{/link-to}}
+	{{/if}}
+</div>
+<div class="main">
+  {{outlet}}
+</div>
